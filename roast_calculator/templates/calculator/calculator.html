@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Roast Calculation
+{% endblock %}
+
+{% block header %}
+
+{% endblock %}
+
+
+{% block content %}
+<h2> Enter the timings below </h2>
+<form method="post">
+    {{form.hidden_tag()}}
+    <h3>Meat In Time</h3>
+    {{form.meat_in_time}}
+    {% if form.meat_in_time.errors %}
+    {% for error in form.meat_in_time.errors %}
+    <p> {{ error }} </p>
+    {% endfor %}
+    {% endif %}
+    <br>
+    <h3>Meat Cooking Duration</h3>
+    {{form.meat_cooking_duration}}
+    {% if form.meat_cooking_duration.errors %}
+    {% for error in form.meat_cooking_duration.errors %}
+    <p> {{ error }} </p>
+    {% endfor %}
+    {% endif %}
+    <br>
+    {{form.submit}}
+
+</form>
+
+<br>
+
+{% for time in times %}
+    <p>{{time}}</p>
+{% endfor %}
+{% endblock %}
