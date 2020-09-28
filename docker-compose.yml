@@ -1,7 +1,7 @@
 version: "3"
 services:
   # Web application
-  web:
+  roast_calculator:
     image: "roast_calculator"
     ports:
       - "6010:8000"
