@@ -1,0 +1,13 @@
+version: "3"
+services:
+  # Web application
+  web:
+    image: "roast_calculator"
+    ports:
+      - "6010:8000"
+    networks:
+      - roast_calculator
+    restart: unless-stopped
+
+networks:
+  roast_calculator:
