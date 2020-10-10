@@ -28,14 +28,20 @@ Roast Calculation
     <p> {{ error }} </p>
     {% endfor %}
     {% endif %}
-    <br>
+    <!--<br>  -->
     {{form.submit}}
 
 </form>
 
 <br>
 
-{% for time in times %}
-    <p>{{time}}</p>
-{% endfor %}
+<table>
+    {% for time in times %}
+    <tr>
+    {% for part in time %}
+    <td>{{part}}</td>
+    {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
 {% endblock %}

@@ -70,7 +70,8 @@ def calculate_times(meat_in_time, meat_cooking_duration):
 
     time_strs = []
     for time in sorted_times:
-        time_str = time[0] + time[1].strftime('%H:%M')
+        # time_str = time[0] + time[1].strftime('%H:%M')
+        time_str = [time[0], time[1].strftime('%H:%M')]
         time_strs.append(time_str)
 
     return time_strs
